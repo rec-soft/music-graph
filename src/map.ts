@@ -1,19 +1,22 @@
 export const genreMap = new Map<string, Genre>;
+export const toGenreId = (name: string): string => name.replace(" ", "-");
 
 class Genre {
     readonly name: string;
+    readonly id: string;
     readonly description?: string;
     readonly example?: Track;
     readonly next: Relation[];
 
     constructor(name: string, description?: string, example?: Track) {
         this.name = name;
+        this.id = toGenreId(this.name)
         this.description = description;
         this.example = example;
         this.next = [];
-        
+
         // Register self in the global store
-        genreMap.set(this.name, this);
+        genreMap.set(this.id, this);
     }
 
     addRelation(destination: Genre, comparison: string) {

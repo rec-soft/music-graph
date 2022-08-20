@@ -5,21 +5,21 @@
                 <div class="card-content">
                     <!-- Genre info -->
                     <h1 class="title">
-                        {{ entryGenre.name }}
+                        {{ genre.name }}
                     </h1>
                     <p class="subtitle">Description goes here!</p>
                     <!-- Example track player -->
                 </div>
                 <!-- Navigation to next pages -->
                 <footer class="card-footer">
-                    <a
-                        v-for="relation in entryGenre.next"
+                    <router-link
+                        v-for="relation in genre.next"
                         v-bind:key="relation.destination.name"
                         class="card-footer-item"
-                        href="#"
+                        :to="`/${relation.destination.id}`"
                     >
                         {{ relation.comparison }}
-                    </a>
+                    </router-link>
                 </footer>
             </div>
         </section>
@@ -28,13 +28,20 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { entryGenre } from "../map";
+import { RouterLink } from "vue-router";
+import { entryGenre, genreMap } from "../map";
 
 export default defineComponent({
     name: "HomeView",
+    components: {
+        RouterLink,
+    },
     data() {
+        const genreId = Array.isArray(this.$route.params.genreId)
+            ? this.$route.params.genreId[0] ?? ""
+            : this.$route.params.genreId;
         return {
-            entryGenre,
+            genre: genreMap.get(genreId) ?? entryGenre,
         };
     },
 });
