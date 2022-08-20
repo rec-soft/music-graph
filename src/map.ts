@@ -1,3 +1,5 @@
+export const genreMap = new Map<string, Genre>;
+
 class Genre {
     readonly name: string;
     readonly description?: string;
@@ -9,6 +11,9 @@ class Genre {
         this.description = description;
         this.example = example;
         this.next = [];
+        
+        // Register self in the global store
+        genreMap.set(this.name, this);
     }
 
     addRelation(destination: Genre, comparison: string) {
