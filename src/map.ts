@@ -5,14 +5,16 @@ class Genre {
     readonly name: string;
     readonly id: string;
     readonly description?: string;
-    readonly example?: Track;
+    // HTML that represents the embedded player.
+    // <iframe style="border-radius:12px" src="${URL}" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    readonly trackUrl?: string;
     readonly next: Relation[];
 
-    constructor(name: string, description?: string, example?: Track) {
+    constructor(name: string, description?: string, trackUrl?: string) {
         this.name = name;
         this.id = toGenreId(this.name)
         this.description = description;
-        this.example = example;
+        this.trackUrl = trackUrl;
         this.next = [];
 
         // Register self in the global store
@@ -24,12 +26,6 @@ class Genre {
     }
 }
 
-interface Track {
-    previewURL: string;
-    artistName: string;
-    trackName: string;
-}
-
 interface Relation {
     // What this relation does more of than the current genre. E.g "faster";
     comparison: string;
@@ -37,7 +33,7 @@ interface Relation {
 }
 
 // Declare all genres up top, so each can reference each other below.
-const nuMetal = new Genre("Nu Metal");
+const nuMetal = new Genre("Nu Metal", "", `https://open.spotify.com/embed/track/75Wz8eZhn2xBHFUGyJgHQP?utm_source=generator`);
 const metalcore = new Genre("Metalcore");
 const dubstep = new Genre("Dubstep");
 const trap = new Genre("Trap");
@@ -76,7 +72,9 @@ dubstep.addRelation(trap, "More bass");
 dubstep.addRelation(dnb, "Faster");
 
 trap.addRelation(future, "Chiller");
-trap.addRelation(kpop, "Poppier");
+trap.addRelation(nuMetal, "More acoustic");
+
+future.addRelation(pcmusic, "Weirder")
 
 dnb.addRelation(trance, "Dreamier");
 
@@ -94,7 +92,7 @@ indietronica.addRelation(electropop, "Poppier");
 indie.addRelation(nuMetal, "Angstier");
 
 electropop.addRelation(hyperpop, "Weirder");
-electropop.addRelation(kpop, "More Korean");
+electropop.addRelation(kpop, "Bigger");
 
 kpop.addRelation(pcmusic, "More saccarine");
 
@@ -108,8 +106,10 @@ hyperpop.addRelation(
 pcmusic.addRelation(electropop, "Broader");
 pcmusic.addRelation(vaporwave, "More nostalgic");
 
-vaporwave.addRelation(newAge, "More unironic");
+vaporwave.addRelation(newAge, "Less ironic");
 
 newAge.addRelation(idm, "More modern");
+
+// TODO: add more connections to the root so this is more cyclical.
 
 export const entryGenre = nuMetal;
