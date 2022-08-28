@@ -6,15 +6,14 @@ class Genre {
     readonly id: string;
     readonly description?: string;
     // HTML that represents the embedded player.
-    // <iframe style="border-radius:12px" src="${URL}" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    readonly trackUrl?: string;
+    readonly trackId?: string;
     readonly next: Relation[];
 
-    constructor(name: string, description?: string, trackUrl?: string) {
+    constructor(name: string, description?: string, trackId?: string) {
         this.name = name;
         this.id = toGenreId(this.name)
         this.description = description;
-        this.trackUrl = trackUrl;
+        this.trackId = trackId;
         this.next = [];
 
         // Register self in the global store
@@ -33,8 +32,8 @@ interface Relation {
 }
 
 // Declare all genres up top, so each can reference each other below.
-const nuMetal = new Genre("Nu Metal", "", `https://open.spotify.com/embed/track/75Wz8eZhn2xBHFUGyJgHQP?utm_source=generator`);
-const metalcore = new Genre("Metalcore");
+const nuMetal = new Genre("Nu Metal", "", "75Wz8eZhn2xBHFUGyJgHQP");
+const metalcore = new Genre("Metalcore", "", "0M3adYbGtyRHACP86dey1H");
 const dubstep = new Genre("Dubstep");
 const trap = new Genre("Trap");
 const dnb = new Genre("Drum & Bass");

@@ -9,6 +9,15 @@
                     </h1>
                     <p class="subtitle">Description goes here!</p>
                     <!-- Example track player -->
+                    <iframe
+                        style="border-radius: 12px"
+                        v-if="genre.trackId"
+                        :src="`https://open.spotify.com/embed/track/${genre.trackId}?utm_source=generator`"
+                        width="100%"
+                        height="280"
+                        frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    ></iframe>
                 </div>
                 <!-- Navigation to next pages -->
                 <footer class="card-footer">
