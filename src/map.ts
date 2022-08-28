@@ -5,7 +5,7 @@ class Genre {
     readonly name: string;
     readonly id: string;
     readonly description?: string;
-    // HTML that represents the embedded player.
+    // Spotify track ID.
     readonly trackId?: string;
     readonly next: Relation[];
 
@@ -32,13 +32,22 @@ interface Relation {
 }
 
 // Declare all genres up top, so each can reference each other below.
+
+// Linkin Park - With You (Reanimation)
 const nuMetal = new Genre("Nu Metal", "", "75Wz8eZhn2xBHFUGyJgHQP");
+// BMTH - Throne
 const metalcore = new Genre("Metalcore", "", "0M3adYbGtyRHACP86dey1H");
-const dubstep = new Genre("Dubstep");
-const trap = new Genre("Trap");
-const dnb = new Genre("Drum & Bass");
-const trance = new Genre("Trance");
-const idm = new Genre('"Intelligent" Dance Music 🙄');
+// Nero - Promises
+const dubstep = new Genre("Dubstep", "", "2LCCxYQ5dw1dz3Pu6APEUH");
+// RL Grime - Core
+const trap = new Genre("Trap", "", "6Knx4Tp8hE7IlYtde2dCYI");
+// Delta Heavy - Stay (Maduk Remix)
+const dnb = new Genre("Drum & Bass", "", "53V634wCwWCDJzYDFtBNIq");
+// Motorcycle - As the rush comes
+const trance = new Genre("Trance", "", "6uEmDZoJcc7Oqrute8BA2N");
+// const progressive = new Genre("Progressive", "", "") TOOD: find a spot for this.
+// Jon Hopkins - Open Eye Signal
+const idm = new Genre('"Intelligent" Dance Music 🙄', "", "6wMTeVootJ8RdCLNOZy5Km");
 const deepHouse = new Genre("Deep House");
 const hardstyle = new Genre("Hardstyle");
 const future = new Genre("Future Bass");
