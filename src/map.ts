@@ -1,4 +1,4 @@
-export const genreMap = new Map<string, Genre>;
+export const genreMap = new Map<string, Genre>();
 export const toGenreId = (name: string): string => name.replace(" ", "-");
 
 class Genre {
@@ -11,7 +11,7 @@ class Genre {
 
     constructor(name: string, description?: string, trackId?: string) {
         this.name = name;
-        this.id = toGenreId(this.name)
+        this.id = toGenreId(this.name);
         this.description = description;
         this.trackId = trackId;
         this.next = [];
@@ -46,22 +46,45 @@ const dnb = new Genre("Drum & Bass", "", "53V634wCwWCDJzYDFtBNIq");
 // Motorcycle - As the rush comes
 const trance = new Genre("Trance", "", "6uEmDZoJcc7Oqrute8BA2N");
 // const progressive = new Genre("Progressive", "", "") TOOD: find a spot for this.
+// const electro = new Genre("Electro House", "", "") TOOD: find a spot for this.
 // Jon Hopkins - Open Eye Signal
-const idm = new Genre('"Intelligent" Dance Music 🙄', "", "6wMTeVootJ8RdCLNOZy5Km");
-const deepHouse = new Genre("Deep House");
-const hardstyle = new Genre("Hardstyle");
-const future = new Genre("Future Bass");
-const hardDance = new Genre("Hard Dance");
-const witchHouse = new Genre("WitchHouse");
-const indietronica = new Genre("Indietronica");
-const indie = new Genre("Indie");
-const kpop = new Genre("K-Pop");
-const electropop = new Genre("Electropop");
-const hyperpop = new Genre("Hyperpop");
-const pcmusic = new Genre("PC Music");
+const idm = new Genre(
+    '"Intelligent" Dance Music 🙄',
+    "",
+    "6wMTeVootJ8RdCLNOZy5Km"
+);
+// Dusky - Tiers
+const deepHouse = new Genre("Deep House", "", "3xxceaZr927fmH4tkRHTcF");
+// Rebourne - Into my heart
+const hardstyle = new Genre("Hardstyle", "", "7rQFHtqvFcQ1VI2oZG6zxu");
+// Flume - The Difference
+const future = new Genre("Future Bass", "", "4nlvKIIetOWGIMyhjQXgOZ");
+// Pawlowski - Demonic Dimensions
+const hardDance = new Genre("Hard Dance", "", "7CUaRaO6quCSAyV2lbL7WT");
+// Imanu - Buried
+const witchHouse = new Genre("Witch House", "", "47Yi7jvxnwCG0zGa41vmU1");
+// The Presets - Ghosts
+const indietronica = new Genre("Indietronica", "", "17qyE3zCNdfOKmH3SXMwFX");
+// The xx - Crystalized
+const indie = new Genre("Indie", "", "33R3swWziWYmnDYvZqcZVS");
+// SuperM - Monster & Infinity
+const kpop = new Genre("K-Pop", "", "5b841RC6QkaHVh4tS3lQ3n");
+// CRJ - Cut to the feeling
+const electropop = new Genre("Electropop", "", "6EJiVf7U0p1BBfs0qqeb1f");
+// Charli XCX - Unlock It
+const hyperpop = new Genre("Hyperpop", "", "3qGHAKgjQruzj6doKkyEb5");
+// AG Cook - Show me What
+const pcmusic = new Genre("PC Music", "", "0qJtV82bKOgB2kvfa8IrZp");
+// TODO: find a good link.
+// https://soundcloud.com/nightcorey/she-belongs-2-me
 const nightcore = new Genre("Nightcore");
-const newAge = new Genre("90s Neoliberal Global Village Eco-Utopia");
-const vaporwave = new Genre("Vaporwave");
+// John Serrie - Tigri
+const newAge = new Genre(
+    "90s Neoliberal Global Village Eco-Utopia",
+    "The theme music for how we solved problems like racism and poverty with the power of capitalism. I listen to it when I want the optimism of a hedge fund manager in a hot market.",
+    "6vuX6KkjeRcCtbTJgkulxw"
+);
+const vaporwave = new Genre("Vaporwave"); // macintosh plus
 
 // Define relations. These are directional and may be cyclical.
 nuMetal.addRelation(metalcore, "More metal");
@@ -72,7 +95,7 @@ metalcore.addRelation(hardstyle, "More electronic");
 hardstyle.addRelation(hardDance, "Darker");
 hardstyle.addRelation(nightcore, "Even faster");
 
-hardDance.addRelation(witchHouse, "More vocal");
+hardDance.addRelation(witchHouse, "More arythmic");
 
 witchHouse.addRelation(indietronica, "Poppier");
 
@@ -82,7 +105,7 @@ dubstep.addRelation(dnb, "Faster");
 trap.addRelation(future, "Chiller");
 trap.addRelation(nuMetal, "More acoustic");
 
-future.addRelation(pcmusic, "Weirder")
+future.addRelation(pcmusic, "Weirder");
 
 dnb.addRelation(trance, "Dreamier");
 

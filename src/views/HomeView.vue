@@ -9,6 +9,7 @@
                     </h1>
                     <p class="subtitle">Description goes here!</p>
                     <!-- Example track player -->
+                    <!-- document.querySelector('[title="Play"]').click() -->
                     <iframe
                         style="border-radius: 12px"
                         v-if="genre.trackId"
