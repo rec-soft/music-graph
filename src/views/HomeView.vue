@@ -7,7 +7,9 @@
                     <h1 class="title">
                         {{ genre.name }}
                     </h1>
-                    <p class="subtitle">Description goes here!</p>
+                    <p class="content">
+                        {{ genre.description ?? "Description goes here!" }}
+                    </p>
                     <!-- Example track player -->
                     <!-- document.querySelector('[title="Play"]').click() -->
                     <iframe

@@ -49,8 +49,8 @@ const trance = new Genre("Trance", "", "6uEmDZoJcc7Oqrute8BA2N");
 // const electro = new Genre("Electro House", "", "") TOOD: find a spot for this.
 // Jon Hopkins - Open Eye Signal
 const idm = new Genre(
-    '"Intelligent" Dance Music 🙄',
-    "",
+    '"Intelligent" Dance Music',
+    "In grad school, I found a lot of free events and concerts to go to online. One of these was Jon Hopkins, which is now a go-to for background music during work or gaming. (Though this is a candidate for the worst-named genre.)",
     "6wMTeVootJ8RdCLNOZy5Km"
 );
 // Dusky - Tiers
@@ -81,9 +81,11 @@ const nightcore = new Genre("Nightcore");
 // John Serrie - Tigri
 const newAge = new Genre(
     "90s Neoliberal Global Village Eco-Utopia",
-    "The theme music for how we solved problems like racism and poverty with the power of capitalism. I listen to it when I want the optimism of a hedge fund manager in a hot market.",
+    "Remember in the 90s when we solved the world's problems with the power of capitalism? This is the soundtrack for that. I listen to it when I want the optimism of a hedge fund manager getting rich before the tech bubble.",
     "6vuX6KkjeRcCtbTJgkulxw"
 );
+// TODO: find a good link
+// https://vektroid.bandcamp.com/album/floral-shoppe
 const vaporwave = new Genre("Vaporwave"); // macintosh plus
 
 // Define relations. These are directional and may be cyclical.
