@@ -34,15 +34,35 @@ interface Relation {
 // Declare all genres up top, so each can reference each other below.
 
 // Linkin Park - With You (Reanimation)
-const nuMetal = new Genre("Nu Metal", "", "75Wz8eZhn2xBHFUGyJgHQP");
+const nuMetal = new Genre(
+    "Nu Metal",
+    "I have to start here, with the artist that has stood the test of time more than anything else. Linkin Park regularly is in my top-listened tracks each year, especially from the Reanimation remix album.",
+    "75Wz8eZhn2xBHFUGyJgHQP"
+);
 // BMTH - Throne
-const metalcore = new Genre("Metalcore", "", "0M3adYbGtyRHACP86dey1H");
+const metalcore = new Genre(
+    "Metalcore",
+    "I got into metalcore after going to a couple Underoath shows. High energy and delightfully angsty.",
+    "0M3adYbGtyRHACP86dey1H"
+);
 // Nero - Promises
-const dubstep = new Genre("Dubstep", "", "2LCCxYQ5dw1dz3Pu6APEUH");
+const dubstep = new Genre(
+    "Dubstep",
+    "My dubstep experience peaked seeing Nero in 2012, then, like the rest of the world, fell off the dubstep boat pretty soon after. Loud noises are still fun!",
+    "2LCCxYQ5dw1dz3Pu6APEUH"
+);
 // RL Grime - Core
-const trap = new Genre("Trap", "", "6Knx4Tp8hE7IlYtde2dCYI");
+const trap = new Genre(
+    "Trap",
+    "Maybe a more mature evolution of dubstep that trades some of the noise for hip hop-inspired instrumentals.",
+    "6Knx4Tp8hE7IlYtde2dCYI"
+);
 // Delta Heavy - Stay (Maduk Remix)
-const dnb = new Genre("Drum & Bass", "", "53V634wCwWCDJzYDFtBNIq");
+const dnb = new Genre(
+    "Drum & Bass",
+    "Probably the genre that has been the most consistent favorite of mine for years.",
+    "53V634wCwWCDJzYDFtBNIq"
+);
 // Motorcycle - As the rush comes
 const trance = new Genre("Trance", "", "6uEmDZoJcc7Oqrute8BA2N");
 // const progressive = new Genre("Progressive", "", "") TOOD: find a spot for this.
