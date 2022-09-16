@@ -1,5 +1,5 @@
 <template>
-    <main class="section is-large">
+    <main class="section is-medium">
         <RouterView :key="$route.path" />
     </main>
 </template>

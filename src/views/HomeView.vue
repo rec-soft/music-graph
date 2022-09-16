@@ -12,18 +12,17 @@
                         </p>
                         <p>
                             For example, I listen to a lot of ambient,
-                            repetetive, instrumental stuff while working since
-                            that helps me focus. But that's not a satisfying
-                            answer, nor does it capture what I like in general.
-                            There is music I enjoy live, but not listening to at
-                            home. And stuff that I put on repeat for a month and
-                            never touch again.
+                            repetitive, instrumental stuff while working since
+                            that helps me focus. There is music I enjoy live,
+                            but not listening to at home. And stuff that I put
+                            on repeat for a month and never touch again. But
+                            that's not a complete nor satisfying.
                         </p>
                         <p>
                             So, this little app aims to answer that question
                             from the top ☝🏻. I picked one track per genre that
-                            might not be the best example of the genre itself--
-                            rather it represents something I particularly enjoy.
+                            represents something I particularly enjoy -- even if
+                            it's not be the best example of the genre itself.
                             Then you can continue on to related genres (and
                             their tracks).
                         </p>

@@ -36,13 +36,13 @@ interface Relation {
 // Linkin Park - With You (Reanimation)
 const nuMetal = new Genre(
     "Nu Metal",
-    "I have to start here, with the artist that has stood the test of time more than anything else. Linkin Park regularly is in my top-listened tracks each year, especially from the Reanimation remix album.",
-    "75Wz8eZhn2xBHFUGyJgHQP"
+    "I have to start with Linkin Park, which is regularly in my top-listened tracks every year. Particular big love for the Reanimation remix album, which leans more towards the electronic stuff. Nothing else has come out like it.",
+    "4zP2e2aIzOZGEFTq1MDJmm"
 );
 // BMTH - Throne
 const metalcore = new Genre(
     "Metalcore",
-    "I got into metalcore after going to a couple Underoath shows. High energy and delightfully angsty.",
+    "I got into metalcore after going to a couple Underoath shows (also featuring BMTH). High energy and delightfully angsty.",
     "0M3adYbGtyRHACP86dey1H"
 );
 // Nero - Promises
@@ -108,7 +108,7 @@ const hardDance = new Genre(
 // Imanu - Buried
 const witchHouse = new Genre(
     "Witch House",
-    `A college introduced me to witch house and said "the more I get into it, the more I realise I'm just listening to white noise". Amen.`,
+    `A college introduced me to witch house and said "the more I get into it, the more I realize I'm just listening to white noise". Amen.`,
     "47Yi7jvxnwCG0zGa41vmU1"
 );
 // The Presets - Ghosts
