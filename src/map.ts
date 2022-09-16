@@ -60,12 +60,20 @@ const trap = new Genre(
 // Delta Heavy - Stay (Maduk Remix)
 const dnb = new Genre(
     "Drum & Bass",
-    "Probably the genre that has been the most consistent favorite of mine for years.",
-    "53V634wCwWCDJzYDFtBNIq"
+    "Possibly my most consistently-loved genre. Though I definitely most-strongly associate it with my time living in Germany (I have a poster in my office from a Netsky show I saw there).",
+    "1JG6SBFLt0cJ680ykwbk4e"
 );
 // Motorcycle - As the rush comes
-const trance = new Genre("Trance", "", "6uEmDZoJcc7Oqrute8BA2N");
-// const progressive = new Genre("Progressive", "", "") TOOD: find a spot for this.
+const trance = new Genre(
+    "Trance",
+    "Since trance introduced me to electronic music, I had to pick a song from high school. There's a lot of good new stuff, but old school trance is the best (including modern takes on it, such as Virtual Self).",
+    "6uEmDZoJcc7Oqrute8BA2N"
+);
+const progressive = new Genre(
+    "Progressive",
+    "I listened to progressive a late-college and early-grad school, when I saw Prydz a couple times. Now it's some good working music, if I don't mind that nostalgia trip.",
+    "4GhRCSt1NJIK0osyhRS0H8"
+);
 // const electro = new Genre("Electro House", "", "") TOOD: find a spot for this.
 // Jon Hopkins - Open Eye Signal
 const idm = new Genre(
@@ -74,39 +82,89 @@ const idm = new Genre(
     "6wMTeVootJ8RdCLNOZy5Km"
 );
 // Dusky - Tiers
-const deepHouse = new Genre("Deep House", "", "3xxceaZr927fmH4tkRHTcF");
+const deepHouse = new Genre(
+    "Deep House",
+    "I listen to a lot of deep house. The intense, repetetive beats and (typically) lack of vocals make it easy to focus.",
+    "3xxceaZr927fmH4tkRHTcF"
+);
 // Rebourne - Into my heart
-const hardstyle = new Genre("Hardstyle", "", "7rQFHtqvFcQ1VI2oZG6zxu");
+const hardstyle = new Genre(
+    "Hardstyle",
+    "Big cheesey beats meant to be played loud. I listen to this when I just want something silly and fast.",
+    "7rQFHtqvFcQ1VI2oZG6zxu"
+);
 // Flume - The Difference
-const future = new Genre("Future Bass", "", "4nlvKIIetOWGIMyhjQXgOZ");
-// Pawlowski - Demonic Dimensions
-const hardDance = new Genre("Hard Dance", "", "7CUaRaO6quCSAyV2lbL7WT");
+const future = new Genre(
+    "Future Bass",
+    "I associate Flume, Disclosure, and contemporaries so strongly with grad school ~2014 when future bass was starting to get huge.",
+    "4nlvKIIetOWGIMyhjQXgOZ"
+);
+// Jaess - Closing
+const hardDance = new Genre(
+    "Techno",
+    "I only recently started listening to techno, often as working music when I need something a bit more intense. This is an early fav track and I'm excited to explore more.",
+    "7eCltVjD2MFveyEqXSBI4x"
+);
 // Imanu - Buried
-const witchHouse = new Genre("Witch House", "", "47Yi7jvxnwCG0zGa41vmU1");
+const witchHouse = new Genre(
+    "Witch House",
+    `A college introduced me to witch house and said "the more I get into it, the more I realise I'm just listening to white noise". Amen.`,
+    "47Yi7jvxnwCG0zGa41vmU1"
+);
 // The Presets - Ghosts
-const indietronica = new Genre("Indietronica", "", "17qyE3zCNdfOKmH3SXMwFX");
+const indietronica = new Genre(
+    "Indietronica",
+    "I listened to a lot of indietronica in college. This and PNAU's Go Bang are two of my top played songs of all time.",
+    "17qyE3zCNdfOKmH3SXMwFX"
+);
 // The xx - Crystalized
-const indie = new Genre("Indie", "", "33R3swWziWYmnDYvZqcZVS");
+const indie = new Genre(
+    "Indie",
+    "I listened to a lot of indie in high school, driven largely by like-minded friends and a monthly torrent download of top new indie songs.",
+    "33R3swWziWYmnDYvZqcZVS"
+);
 // SuperM - Monster & Infinity
-const kpop = new Genre("K-Pop", "", "5b841RC6QkaHVh4tS3lQ3n");
+const kpop = new Genre(
+    "K-Pop",
+    "K-Pop defies genre definitions, sort of by design. Fun fact: our first dance at our wedding was to a BTS (and Charli XCX) song.",
+    "5b841RC6QkaHVh4tS3lQ3n"
+);
 // CRJ - Cut to the feeling
-const electropop = new Genre("Electropop", "", "6EJiVf7U0p1BBfs0qqeb1f");
-// Charli XCX - Unlock It
-const hyperpop = new Genre("Hyperpop", "", "3qGHAKgjQruzj6doKkyEb5");
-// AG Cook - Show me What
-const pcmusic = new Genre("PC Music", "", "0qJtV82bKOgB2kvfa8IrZp");
-// TODO: find a good link.
-// https://soundcloud.com/nightcorey/she-belongs-2-me
-const nightcore = new Genre("Nightcore");
+const electropop = new Genre(
+    "Electropop",
+    "I listen to mainstream stuff too! Our long car rides from LA to SF are filled with CRJ and contemporaries. 100% bops.",
+    "6EJiVf7U0p1BBfs0qqeb1f"
+);
+// Slayyyer - Troubled paradise
+const hyperpop = new Genre(
+    "Hyperpop",
+    "A beautiful blend of poppy bops and the weirdness of genres like nightcore. This is probably my go-to genre that includes words.",
+    "30qNNWs5kUgcviZxOrQRTo"
+);
+// AG Cook - Xcxoplex
+const pcmusic = new Genre(
+    "PC Music",
+    "A lot of PC Music is hard to listen to for the first time. But as I give tracks a 2nd-10th shot, they grow to become some of my favorite. (Technically PC Music is just a label, but I want an excuse to put two hyperpop tracks)",
+    "3Qtc8RGzuzbDGBpZ3tya7s"
+);
+// Aoki
+const nightcore = new Genre(
+    "Nightcore",
+    "For a few, beautiful years, there was a nightcore radio show (nts.live/shows/jack). Nighcore sort of died along with it. This track sort of carries the spirit of high-bpm on, just without the pitch-shifted vocals.",
+    "0Bz4zF649klc9hMb9xtj16"
+);
 // John Serrie - Tigri
 const newAge = new Genre(
     "90s Neoliberal Global Village Eco-Utopia",
     "Remember in the 90s when we solved the world's problems with the power of capitalism? This is the soundtrack for that. I listen to it when I want the optimism of a hedge fund manager getting rich before the tech bubble.",
     "6vuX6KkjeRcCtbTJgkulxw"
 );
-// TODO: find a good link
-// https://vektroid.bandcamp.com/album/floral-shoppe
-const vaporwave = new Genre("Vaporwave"); // macintosh plus
+// Eyeliner - Pictures
+const vaporwave = new Genre(
+    "Vaporwave",
+    "A lonely, nostalgia-driven genre made by people who grew up in the malls and computer-labs of the late 90s. I wish the OG, Foral Shoppe was on Spotify. But this is a good substitute.",
+    "2VIvfWMO5F6OkzBHadgVci"
+);
 
 // Define relations. These are directional and may be cyclical.
 nuMetal.addRelation(metalcore, "More metal");
@@ -135,6 +193,9 @@ trance.addRelation(idm, "Bigger brain");
 trance.addRelation(deepHouse, "Chiller");
 
 deepHouse.addRelation(hardDance, "More evil");
+deepHouse.addRelation(progressive, "Lighter");
+
+progressive.addRelation(trance, "Cheesier");
 
 idm.addRelation(future, "Dancier");
 idm.addRelation(indietronica, "More vocal");
