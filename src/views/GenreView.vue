@@ -43,7 +43,7 @@
             class="column is-two-thirds has-text-centered"
             v-if="pastGenres.length > 0"
         >
-            ...
+            ⬆
         </section>
         <section
             class="column is-two-thirds has-text-centered"
