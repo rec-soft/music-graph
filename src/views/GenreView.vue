@@ -29,7 +29,10 @@
                         v-for="relation in genre.next"
                         v-bind:key="relation.destination.name"
                         class="card-footer-item"
-                        :to="`/${relation.destination.id}?${pastGenresQueryParam}`"
+                        :to="`/${relation.destination.id}?${getQueryParam([
+                            genre.id,
+                            ...pastGenres,
+                        ])}`"
                     >
                         {{ relation.comparison }}
                     </router-link>
@@ -48,9 +51,12 @@
             :key="g"
         >
             <!-- Links to past genres -->
-            <button class="button is-rounded is-link is-outlined">
+            <router-link
+                class="button is-rounded is-link is-outlined"
+                :to="`/${g}?${getQueryParam(pastGenres.slice(i + 1))}`"
+            >
                 {{ g }}
-            </button>
+            </router-link>
         </section>
     </main>
 </template>
@@ -81,13 +87,10 @@ export default defineComponent({
             pastGenres,
         };
     },
-    computed: {
-        pastGenresQueryParam() {
+    methods: {
+        getQueryParam(genres: string[]) {
             // Add current genre.
-            return `${PAST_GENRES_QUERY_PARAM}=${[
-                this.genre.id,
-                ...this.pastGenres,
-            ].join(",")}`;
+            return `${PAST_GENRES_QUERY_PARAM}=${genres.join(",")}`;
         },
     },
 });
