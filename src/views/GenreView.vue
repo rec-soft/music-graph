@@ -1,5 +1,5 @@
 <template>
-    <main class="columns body-columns is-centered">
+    <main class="columns body-columns is-centered is-multiline">
         <section class="column is-half">
             <div class="card">
                 <div class="card-content">
@@ -36,6 +36,22 @@
                 </footer>
             </div>
         </section>
+        <section
+            class="column is-two-thirds has-text-centered"
+            v-if="pastGenres.length > 0"
+        >
+            ...
+        </section>
+        <section
+            class="column is-two-thirds has-text-centered"
+            v-for="(g, i) in pastGenres"
+            :key="g"
+        >
+            <!-- Links to past genres -->
+            <button class="button is-rounded is-link is-outlined">
+                {{ g }}
+            </button>
+        </section>
     </main>
 </template>
 
@@ -56,18 +72,22 @@ export default defineComponent({
             ? this.$route.params.genreId[0] ?? ""
             : this.$route.params.genreId;
         const genre = genreMap.get(genreId) ?? entryGenre;
+        const pastGenres: string[] =
+            this.$route.query[PAST_GENRES_QUERY_PARAM]?.toString().split(",") ??
+            [];
+
         return {
             genre,
+            pastGenres,
         };
     },
     computed: {
         pastGenresQueryParam() {
-            const pastGenres: string[] =
-                this.$route.query[PAST_GENRES_QUERY_PARAM]?.toString().split(
-                    ","
-                ) ?? [];
-            pastGenres.push(this.genre.id);
-            return `${PAST_GENRES_QUERY_PARAM}=${pastGenres.join(",")}`;
+            // Add current genre.
+            return `${PAST_GENRES_QUERY_PARAM}=${[
+                this.genre.id,
+                ...this.pastGenres,
+            ].join(",")}`;
         },
     },
 });

@@ -1,5 +1,5 @@
 export const genreMap = new Map<string, Genre>();
-export const toGenreId = (name: string): string => name.replace(" ", "-");
+export const toGenreId = (name: string): string => name.split(" ").join("-");
 
 class Genre {
     readonly name: string;
@@ -59,7 +59,7 @@ const trap = new Genre(
 );
 // Delta Heavy - Stay (Maduk Remix)
 const dnb = new Genre(
-    "Drum & Bass",
+    "Drum and Bass",
     "Possibly my most consistently-loved genre. Though I definitely most-strongly associate it with my time living in Germany (I have a poster in my office from a Netsky show I saw there).",
     "1JG6SBFLt0cJ680ykwbk4e"
 );
@@ -212,10 +212,7 @@ kpop.addRelation(pcmusic, "More saccarine");
 
 nightcore.addRelation(hyperpop, "Poppier");
 
-hyperpop.addRelation(
-    pcmusic,
-    '"I liked this hyperpop before it was called hyperpop"'
-);
+hyperpop.addRelation(pcmusic, "More specific");
 
 pcmusic.addRelation(electropop, "Broader");
 pcmusic.addRelation(vaporwave, "More nostalgic");
