@@ -66,7 +66,7 @@ const dnb = new Genre(
 // Motorcycle - As the rush comes
 const trance = new Genre(
     "Trance",
-    "Since trance introduced me to electronic music, I had to pick a song from high school. There's a lot of good new stuff, but old school trance is the best (including modern takes on it, such as Virtual Self).",
+    "Since trance introduced me to electronic music, I had to pick a song from high school. There's a lot of good new stuff, but old-ish school trance is the best (including modern takes on it, such as Virtual Self).",
     "6uEmDZoJcc7Oqrute8BA2N"
 );
 const progressive = new Genre(
@@ -108,7 +108,7 @@ const hardDance = new Genre(
 // Imanu - Buried
 const witchHouse = new Genre(
     "Witch House",
-    `A college introduced me to witch house and said "the more I get into it, the more I realize I'm just listening to white noise". Amen.`,
+    `A colleague introduced me to witch house and said "the more I get into it, the more I realize I'm just listening to white noise". Amen.`,
     "47Yi7jvxnwCG0zGa41vmU1"
 );
 // The Presets - Ghosts
@@ -150,7 +150,7 @@ const pcmusic = new Genre(
 // Aoki
 const nightcore = new Genre(
     "Nightcore",
-    "For a few, beautiful years, there was a nightcore radio show (nts.live/shows/jack). Nighcore sort of died along with it. This track sort of carries the spirit of high-bpm on, just without the pitch-shifted vocals.",
+    "For a few, beautiful years, there was a nightcore radio show (nts.live/shows/jack). Nightcore sort of died along with it. This track sort of carries the spirit of high-bpm on, just without the pitch-shifted vocals.",
     "0Bz4zF649klc9hMb9xtj16"
 );
 // John Serrie - Tigri
@@ -162,7 +162,7 @@ const newAge = new Genre(
 // Eyeliner - Pictures
 const vaporwave = new Genre(
     "Vaporwave",
-    "A lonely, nostalgia-driven genre made by people who grew up in the malls and computer-labs of the late 90s. I wish the OG, Foral Shoppe was on Spotify. But this is a good substitute.",
+    'A lonely, nostalgia-driven genre made by people who grew up in the malls and computer-labs of the late 90s. I wish the OG, "Foral Shoppe", was on Spotify. But this is a good substitute.',
     "2VIvfWMO5F6OkzBHadgVci"
 );
 

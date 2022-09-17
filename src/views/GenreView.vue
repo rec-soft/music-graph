@@ -12,6 +12,7 @@
                     </p>
                     <!-- Example track player -->
                     <!-- document.querySelector('[title="Play"]').click() -->
+                    <!-- Can't autoplay due to https://stackoverflow.com/questions/25098021/securityerror-blocked-a-frame-with-origin-from-accessing-a-cross-origin-frame -->
                     <iframe
                         style="border-radius: 12px"
                         v-if="genre.trackId"
@@ -28,7 +29,7 @@
                         v-for="relation in genre.next"
                         v-bind:key="relation.destination.name"
                         class="card-footer-item"
-                        :to="`/${relation.destination.id}`"
+                        :to="`/${relation.destination.id}?${pastGenresQueryParam}`"
                     >
                         {{ relation.comparison }}
                     </router-link>
@@ -43,6 +44,8 @@ import { defineComponent } from "vue";
 import { RouterLink } from "vue-router";
 import { entryGenre, genreMap } from "../map";
 
+const PAST_GENRES_QUERY_PARAM = "p";
+
 export default defineComponent({
     name: "GenreView",
     components: {
@@ -52,9 +55,20 @@ export default defineComponent({
         const genreId = Array.isArray(this.$route.params.genreId)
             ? this.$route.params.genreId[0] ?? ""
             : this.$route.params.genreId;
+        const genre = genreMap.get(genreId) ?? entryGenre;
         return {
-            genre: genreMap.get(genreId) ?? entryGenre,
+            genre,
         };
+    },
+    computed: {
+        pastGenresQueryParam() {
+            const pastGenres: string[] =
+                this.$route.query[PAST_GENRES_QUERY_PARAM]?.toString().split(
+                    ","
+                ) ?? [];
+            pastGenres.push(this.genre.id);
+            return `${PAST_GENRES_QUERY_PARAM}=${pastGenres.join(",")}`;
+        },
     },
 });
 </script>
